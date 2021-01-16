@@ -80,7 +80,7 @@ export default class MovieDetail extends Vue {
 
   findMovie(Id: number) {
     this.movieLists.forEach( (value: any) => {
-      if(Id = value.movieID) {
+      if(Id === value.movieID) {
         this.movie = value
       }
     })
@@ -107,20 +107,6 @@ export default class MovieDetail extends Vue {
 
     return Y + M + D + h + m + s
   }
-
-  // async getMessageContent() {
-  //   let data = {
-  //     infoId: this.$route.query.InfoId
-  //   }
-
-  //   await this.$store.dispatch('getMessageContent', data)
-  //   this.messageContent = this.$store.state.messageContent
-  // } 
-
-  // async mounted() {
-  //   await this.getMessageContent()
-  //   this.chooseIcon()
-  // }
 }
 
 </script>
